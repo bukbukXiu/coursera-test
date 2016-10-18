@@ -1,10 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-        <title>Hello Coursera!</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- <script src="script/script.js"></script> -->
+        
+        <title>You shit werewolfs.</title>
     </head>
     <body>
-        <h1>Hello Coursera!</h1>
-        <p>Hello asshole. Nice haircut. Did someone puke on it?</p>
+    	<div>
+	    	<header class="curved">
+	    	<img src="images/fluAl.png" align="left" width="80px" height="80px" style="margin : 20px 20px"/>
+	    	<h1>You're entering Hell</h1>
+	    	</header>
+    	</div>
+    	
+    	<div class="parallax"></div>
+
+    	<div class="content" id="yourDiv">
+    		
+    			<img class="galleryItem" src="images/fl1.jpg"/>
+    			<img class="galleryItem" src="images/fl1.jpg"/>
+    			<img class="galleryItem" src="images/fl1.jpg"/>
+    	</div>
+    	
+
+		<div class="parallax"></div>
+    	
+
+
+    	<script src="jquery/dist/jquery.min.js"></script>
+
+    	<!-- Sticky Header -->
+		<script>
+		$(window).scroll(function() {
+		    if ($(this).scrollTop() > 1){  
+		        $('header').addClass("sticky");
+		    }
+		    else{
+		        $('header').removeClass("sticky");
+		    }
+		});
+		</script>
+
+		
+
+
     </body>
 </html>
+
+	<script>
+	        document.addEventListener('DOMContentLoaded', function () {   
+	            var button = document.getElementById('slide');
+	            button.onclick = function () {
+	                document.getElementById('container').scrollLeft += 20;
+	            };
+	        }, false);
+    </script>
+
+
+<!-- HorizontalScrolling -->
+		<!-- <script>
+			(function() {
+				function scrollHorizontally(e) {
+					e = window.event || e;
+					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+	        document.getElementById('yourDiv').scrollLeft -= (delta*40); // Multiplied by 40
+	        e.preventDefault();
+	        // console.log(document.getElementById('yourDiv'));
+	    }
+	    if (document.getElementById('yourDiv').addEventListener) {
+	        document.getElementById('yourDiv').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+
+	    }
+	})();
+
+		</script> -->
